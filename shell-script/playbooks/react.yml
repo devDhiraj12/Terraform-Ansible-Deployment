@@ -1,0 +1,19 @@
+---
+- name: Start React application with AWS Load Balancer DNS
+  hosts: web-server
+  # vars:
+  #   lb_dns: "application-tier-lb-1911141156.us-east-1.elb.amazonaws.com"
+  tasks:
+
+    - name: Clone Repository
+      git:
+        repo: "https://github.com/devDhiraj12/jar-files.git"
+        dest: "/home/ec2-user/jars/"
+      become: yes
+
+    - name: Serve the app
+      command: pm2 serve /home/ec2-user/jars/build 3001 --spa  
+      args:
+        chdir: /home/ec2-user/jars/build
+      become: yes
+# End of playbook

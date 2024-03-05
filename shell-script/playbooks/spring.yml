@@ -1,0 +1,25 @@
+---
+- name: Install Java 17 (Amazon Corretto) and deploy JAR
+  hosts: application
+  become: yes
+  # vars:
+  #   db_dns: "{{ lookup('pipe', '/home/ec2-user/get_db_dns.sh') }}"
+  tasks:
+    - name: Clone Repository
+      git:
+        repo: "https://github.com/devDhiraj12/jar-files.git"
+        dest: "/home/ec2-user/jars/"
+      become: yes
+
+    # - name: Stop the process using port 8080 
+    #   shell: "sudo lsof -ti :8080 | xargs kill -9"
+    #   ignore_errors: yes
+
+    - name: Run Spring Boot application in background
+      async: 300
+      poll: 0
+      shell: "nohup java -jar /home/ec2-user/jars/spring.jar > /dev/null 2>&1 & "
+      ignore_errors: yes
+
+
+  # Add any other necessary roles, handlers, etc.

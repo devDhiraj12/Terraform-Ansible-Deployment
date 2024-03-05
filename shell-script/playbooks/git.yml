@@ -1,0 +1,22 @@
+# ---
+# - name: Install Git and Clone Repository
+#   hosts: web-server
+#   become: yes
+#   tasks:
+#     - name: Update package cache
+#       yum:
+#         name: '*'
+#         state: latest
+#       become: yes
+
+#     - name: Install Git
+#       yum:
+#         name: git
+#         state: present
+#       become: yes
+
+#     - name: Clone Repository
+#       git:
+#         repo: "https://github.com/username/repository.git"
+#         dest: "/path/to/destination_folder"
+#       become: yes
