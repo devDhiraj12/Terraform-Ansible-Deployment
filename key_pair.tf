@@ -13,4 +13,4 @@ resource "aws_key_pair" "terraform-key" {
 resource "local_file" "private_key_pem" {
   content = tls_private_key.pri-terra-key.private_key_pem
   filename = "${path.module}/terraform-key.pem"
-}
+}  

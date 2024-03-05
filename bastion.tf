@@ -8,7 +8,7 @@ resource "aws_instance" "jump-ec2" {
   iam_instance_profile = aws_iam_instance_profile.ansible.name
   user_data = file("${path.module}/shell-script/bastion.sh")
   depends_on = [ aws_iam_role.ansible_role, aws_autoscaling_group.application_tier, aws_autoscaling_group.presentation_tier]
-
+  
     connection {
       type        = "ssh"
       user        = "ec2-user" 

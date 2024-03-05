@@ -8,7 +8,7 @@ ANSIBLE_HOSTS="/opt/application/hosts.ini"
 
 # Get the instance IDs of the instances in the Auto Scaling group
 INSTANCE_IDS=$(aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names "$ASG_NAME" --query 'AutoScalingGroups[].Instances[].InstanceId' --output text)
-
+   
 # Add the application group to the Ansible hosts file
 echo "[application]" > "$ANSIBLE_HOSTS"
 

@@ -1,7 +1,7 @@
 variable "instance-type" {
   default = "t2.small"
 }
-
+  
 #autosacling config
 variable "max-size" {
   default = "4"

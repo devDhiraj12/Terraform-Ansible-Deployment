@@ -15,5 +15,5 @@
       command: pm2 serve /home/ec2-user/jars/build 3001 --spa  
       args:
         chdir: /home/ec2-user/jars/build
-      become: yes
+      become: yes      
 # End of playbook

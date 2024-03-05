@@ -9,7 +9,7 @@ resource "aws_lb" "application_tier" {
 
   enable_deletion_protection = false
   
-}
+}   
 
 resource "aws_lb_target_group" "application_tier" {
   name     = "application-tier-lb-tg"

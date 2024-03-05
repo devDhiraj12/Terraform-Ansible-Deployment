@@ -14,4 +14,4 @@ do
 done
 sudo /home/ec2-user/get-hosts.sh
 sudo /home/ec2-user/get-hosts-web.sh
-sudo /home/ec2-user/get-lb-dns.sh
+sudo /home/ec2-user/get-lb-dns.sh 

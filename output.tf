@@ -11,3 +11,4 @@ output "alb_dns_name_web" {
 output "alb_dns_name_app" {
     value = "DNS name of the Applicaton Load Balancer ${aws_lb.application_tier.dns_name}"
 }
+  

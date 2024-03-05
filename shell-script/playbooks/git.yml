@@ -7,7 +7,7 @@
 #       yum:
 #         name: '*'
 #         state: latest
-#       become: yes
+#       become: yes  
 
 #     - name: Install Git
 #       yum:
@@ -20,3 +20,4 @@
 #         repo: "https://github.com/username/repository.git"
 #         dest: "/path/to/destination_folder"
 #       become: yes
+ 

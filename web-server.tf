@@ -9,7 +9,7 @@ resource "aws_lb" "front_end" {
 
   enable_deletion_protection = false
 }
-
+  
 resource "aws_lb_target_group" "front_end" {
   name     = "front-end-lb-tg"
   port     = "3001"

@@ -18,7 +18,7 @@ resource "aws_security_group" "rds_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
+  
 resource "aws_db_instance" "app_db" {
   identifier           = "mysql-db"
   allocated_storage    = 20 

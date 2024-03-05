@@ -14,7 +14,7 @@ resource "aws_iam_role" "ansible_role" {
       }
     }]
   })
-}
+}  
 
 resource "aws_iam_role_policy_attachment" "ansible_role_attachment" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"

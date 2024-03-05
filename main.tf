@@ -6,7 +6,7 @@ resource "aws_vpc" "dhiraj-vpc" {
     Name = "dhiraj-vpc"
   }
 }
-
+  
 # SECURITY GROUP
 
 resource "aws_security_group" "dhiraj-sg" {

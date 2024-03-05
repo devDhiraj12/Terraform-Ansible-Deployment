@@ -13,7 +13,7 @@
 
     # - name: Stop the process using port 8080 
     #   shell: "sudo lsof -ti :8080 | xargs kill -9"
-    #   ignore_errors: yes
+    #   ignore_errors: yes  
 
     - name: Run Spring Boot application in background
       async: 300
