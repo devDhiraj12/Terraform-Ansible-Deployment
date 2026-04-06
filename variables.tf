@@ -4,7 +4,7 @@ variable "instance-type" {
   
 #autosacling config
 variable "max-size" {
-  default = "4"
+  default = "10"
 }
 variable "min-size" {
   default = "2"
